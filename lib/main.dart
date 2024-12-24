@@ -1,7 +1,9 @@
+//This file was for Rows and Padding
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-  home: Home()
+  home: Home(),
 ));
 
 
@@ -14,23 +16,56 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.lightBlue[600],
       ),
-      body: Center(
-          child: Text(
-            'Add login details',
-            style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 2,
+
+
+      body: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Column(
+            children: <Widget>[
+              Container(
+                color: Colors.pink,
+                padding: EdgeInsets.all(50),
+              ),
+              Container(
                 color: Colors.black,
-                fontFamily: 'Livvic'
+                child: Text(
+                    'Hello',
+                style: TextStyle(
+                  color: Colors.blueAccent,
+                  fontSize: 20,
+                ),
+                ),
+              ),
+            ],
+          ),
+
+          Expanded(
+            flex: 2,
+            child:Container(
+              padding: EdgeInsets.all(30),
+              color: Colors.green,
+              child: Text('hi'),
             ),
-          )
+          ),
+          Expanded(
+            flex: 3,
+            child:Container(
+              padding: EdgeInsets.all(30),
+              color: Colors.blue,
+              child: Text('namo'),
+              ),
+          ),
+        ],
       ),
+
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: Colors.green,
-        child: Text('Login button'),
+        child: Text('Login Page'),
       ),
     );
   }
 }
+
